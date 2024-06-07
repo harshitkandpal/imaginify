@@ -13,7 +13,7 @@ if(!cached){
     cached = (global as any).mongoose = {conn: null, promise: null}
 }
 
-export const connectoDatabase = async()=>{
+export const connectToDatabase = async()=>{
     if(cached.conn) return cached.conn;
 
     if(!MONGODB_URL) throw new Error("MONGODB_URL is required")
